@@ -6,50 +6,45 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class Calculator
+    public class Program
     {
+        
         static void Main(string[] args)
         {
             double A = 0;
             double B = 0;
             int caseSwitch = 0;
+
             Console.WriteLine("tryk 1 for addere");
             Console.WriteLine("tryk 2 for treakke fra");
             Console.WriteLine("tryk 3 for gange");
+            Console.WriteLine("tryk 4 for potens");
             caseSwitch = Console.Read();
+
             Console.WriteLine("intast værdi for A");
             A = Console.Read();
             Console.WriteLine("indtast værdi for B");
             B = Console.Read();
+
+
             switch (caseSwitch)
             {
                 case 1:
-                    Add(A, B);
+                    Calc.Add(A, B);
                     break;
                 case 2:
-                    Subtract(A, B);
+                    Calc.Subtract(A, B);
                     break;
                 case 3:
-                    Multiply(A, B);
+                    Calc.Multiply(A, B);
                     break;
+                case 4:
+                    Calc.Power(A, B);
             }
+
             Console.ReadKey();
         }
-        public static double Add(double A, double B)
-        {
-            double resultat = A + B;
-            return resultat;
-        }
-        public static double Subtract(double A, double B)
-        {
-            double resultat = A - B;
-            return resultat;
-        }
-        public static double Multiply(double A, double B)
-        {
-            double resultat = A * B;
-            return resultat;
-        }
+       
 
     }
 }
