@@ -30,11 +30,18 @@ namespace Calculator
             return resultat;
         }
 
+        public static double Divide(double A, double B)
+        {
+            double resultat = A / B;
+            return resultat;
+        }
+
         // Power:
         public static double Power(double A, double B)
         {
             double resultat = Math.Pow(A, B);
             return resultat;
         }
+
     }
 }

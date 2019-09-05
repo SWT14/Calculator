@@ -15,10 +15,12 @@ namespace Calculator
             double B = 0;
             int caseSwitch = 0;
 
-            Console.WriteLine("tryk 1 for addere");
-            Console.WriteLine("tryk 2 for treakke fra");
-            Console.WriteLine("tryk 3 for gange");
-            Console.WriteLine("tryk 4 for potens");
+            Console.WriteLine("Tryk 1 for at addere ");
+            Console.WriteLine("Tryk 2 for at treakke fra ");
+            Console.WriteLine("Tryk 3 for at gange ");
+            Console.WriteLine("Tryk 4 for at dividere ");
+            Console.WriteLine("Tryk 5 for at beregne potens");
+
             caseSwitch = Console.Read();
 
             Console.WriteLine("intast værdi for A");
@@ -39,7 +41,11 @@ namespace Calculator
                     Calc.Multiply(A, B);
                     break;
                 case 4:
+                    Calc.Divide(A, B);
+                    break;
+                case 5:
                     Calc.Power(A, B);
+                    break;
             }
 
             Console.ReadKey();
