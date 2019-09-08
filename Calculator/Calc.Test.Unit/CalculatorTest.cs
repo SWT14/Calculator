@@ -32,5 +32,28 @@ namespace Calc.Test.Unit
         {
             Assert.That(uut.Power(a, b), Is.EqualTo(resultat));
         }
+
+
+        // test add med forskellige værdier
+        [TestCase(3, 6, 9)]
+        [TestCase(-2, 4, 2)]
+        [TestCase(-4, -4, -8)]
+
+        public void Test_add(double a, double b, double resultat)
+        {
+            Assert.That(uut.Add(a, b), Is.EqualTo(resultat));
+        }
+
+        //test multiply med forskellige værdier
+        [TestCase(3, 3, 9)]
+        [TestCase(-2, 4, 8)]
+        [TestCase(-4, -4, 16)]
+        public void Test_multiply(double a, double b, double resultat)
+        {
+            Assert.That(uut.Multiply(a, b), Is.EqualTo(resultat));
+        }
+
     }
+
 }
+
