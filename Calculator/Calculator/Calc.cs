@@ -10,34 +10,34 @@ namespace Calculator
     {
         
         // Addition:
-        public static double Add(double A, double B)
+        public double Add(double A, double B)
         {
             double resultat = A + B;
             return resultat;
         }
 
         // Subtract:
-        public static double Subtract(double A, double B)
+        public double Subtract(double A, double B)
         {
             double resultat = A - B;
             return resultat;
         }
 
         // Multiply:
-        public static double Multiply(double A, double B)
+        public double Multiply(double A, double B)
         {
             double resultat = A * B;
             return resultat;
         }
 
-        public static double Divide(double A, double B)
+        public double Divide(double A, double B)
         {
             double resultat = A / B;
             return resultat;
         }
 
         // Power:
-        public static double Power(double A, double B)
+        public double Power(double A, double B)
         {
             double resultat = Math.Pow(A, B);
             return resultat;

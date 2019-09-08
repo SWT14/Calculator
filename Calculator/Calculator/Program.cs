@@ -28,7 +28,7 @@ namespace Calculator
             Console.WriteLine("indtast værdi for B");
             B = Console.Read();
 
-
+            /*
             switch (caseSwitch)
             {
                 case 1:
@@ -47,7 +47,7 @@ namespace Calculator
                     Calc.Power(A, B);
                     break;
             }
-
+            */
             Console.ReadKey();
         }
        
