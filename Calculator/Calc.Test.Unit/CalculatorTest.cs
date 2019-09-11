@@ -7,7 +7,7 @@ using NUnit.Framework;
 using Calculator;
 using Calc = Calculator.Calc;
 
-namespace Calc.Test.Unit
+namespace Calculator.Test.Unit
 {
     [TestFixture]
     public class CalculatorTest
@@ -17,9 +17,49 @@ namespace Calc.Test.Unit
         [SetUp]
         public void Setup()
         {
-            uut = new Calculator.Calc();
+            uut = new Calc();
         }
 
+        
+        // Test add med forskellige værdier
+        [TestCase(3, 6, 9)]
+        [TestCase(-2, 4, 2)]
+        [TestCase(-4, -4, -8)]
+        public void Test_add(double a, double b, double resultat)
+        {
+            Assert.That(uut.Add(a, b), Is.EqualTo(resultat));
+        }
+
+        // Test subtract
+        [TestCase(8, 3, 5)]
+        [TestCase(3, 6, -3)]
+        [TestCase(-2, -4, 2)]
+        public void Test_Subtract_ReturnResult(double a, double b, double resultat)
+        {
+            Assert.That(uut.Subtract(a, b), Is.EqualTo((resultat)));
+        }
+
+        // Test multiply med forskellige værdier
+        [TestCase(3, 3, 9)]
+        [TestCase(-2, 4, -8)]
+        [TestCase(-4, -4, 16)]
+        public void Test_multiply(double a, double b, double resultat)
+        {
+            Assert.That(uut.Multiply(a, b), Is.EqualTo(resultat));
+        }
+        //Does it build?
+        //Is this the Jenkins life, or is it just a fantasy?
+
+        // Test devide 
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 2, 2.5)]
+        [TestCase(-6, 2, -3)]
+        public void Test_Divide_ReturnResult(double a, double b, double resultat)
+        {
+            Assert.That(uut.Divide(a, b), Is.EqualTo(resultat));
+        }
+
+        // Test power
         [TestCase(2, 2, 4)]
         [TestCase(2, -2, 0.25)]
         [TestCase(-2, -2, 0.25)]
@@ -32,28 +72,6 @@ namespace Calc.Test.Unit
         {
             Assert.That(uut.Power(a, b), Is.EqualTo(resultat));
         }
-
-
-        // test add med forskellige værdier
-        [TestCase(3, 6, 9)]
-        [TestCase(-2, 4, 2)]
-        [TestCase(-4, -4, -8)]
-
-        public void Test_add(double a, double b, double resultat)
-        {
-            Assert.That(uut.Add(a, b), Is.EqualTo(resultat));
-        }
-
-        //test multiply med forskellige værdier
-        [TestCase(3, 3, 9)]
-        [TestCase(-2, 4, 8)]
-        [TestCase(-4, -4, 16)]
-        public void Test_multiply(double a, double b, double resultat)
-        {
-            Assert.That(uut.Multiply(a, b), Is.EqualTo(resultat));
-        }
-        //Does it build?
-        //Is this the Jenkins life, or is it just a fantasy?
 
     }
 
