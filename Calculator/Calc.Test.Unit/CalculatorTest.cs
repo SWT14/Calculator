@@ -52,6 +52,8 @@ namespace Calc.Test.Unit
         {
             Assert.That(uut.Multiply(a, b), Is.EqualTo(resultat));
         }
+        //Does it build?
+        //Is this the Jenkins life, or is it just a fantasy?
 
     }
 
